@@ -7,7 +7,11 @@ import Experience from "./components/Experience";
 import Personal from "./components/Personal";
 import Contact from "./components/Contact";
 
+import { useState } from "react";
+
 function App() {
+  const [selectedPage, setSelectedPage] = useState()
+
   return (
     <div>
       <NavBar />
