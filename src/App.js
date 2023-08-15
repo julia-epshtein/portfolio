@@ -10,11 +10,11 @@ import Contact from "./components/Contact";
 import { useState } from "react";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState()
+  const [selectedPage, setSelectedPage] = useState('home');
 
   return (
-    <div>
-      <NavBar />
+    <div className="app bg-deep-blue">
+      <NavBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
       <Home />
       <About />
       <Portfolio />
