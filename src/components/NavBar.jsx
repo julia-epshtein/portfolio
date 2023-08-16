@@ -2,23 +2,23 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
+import { Link as RouterLink } from "react-router-dom"; // Import Link from react-router-dom
 
 const Link = ({ link, selectedLink, setSelectedLink }) => {
   return (
-    <AnchorLink
+    <RouterLink
+      to={`/${link}`} // Assuming your paths are set up accordingly
       className={`${selectedLink === link ? "text-purple-400" : ""
         } hover:text-purple-400 transition duration-200`}
-      href={`#${link}`}
       onClick={() => setSelectedLink(link)}
     >
       {link}
-    </AnchorLink>
+    </RouterLink>
   );
 };
 
-const NavBar = () => {
+const NavBar = ({ selectedPage, setSelectedPage }) => {
   const [nav, setNav] = useState(false);
-  const [selectedLink, setSelectedLink] = useState("");
 
   const links = [
     {
@@ -44,22 +44,20 @@ const NavBar = () => {
         <h1 className={"text-5xl font-signature ml-2 text-purple-400"}>Julia Epshtein</h1>
       </div>
 
-      {/* Mobile navigation */}
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 right-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
           {links.map(({ link }) => (
             <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
               <Link
                 link={link}
-                selectedLink={selectedLink}
-                setSelectedLink={setSelectedLink}
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
               />
             </li>
           ))}
         </ul>
       )}
 
-      {/* Toggle button for mobile navigation */}
       <div className="md:hidden pr-4 z-10 text-gray-500">
         <div onClick={() => setNav(!nav)} className="cursor-pointer">
           {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
@@ -73,8 +71,8 @@ const NavBar = () => {
           >
             <Link
               link={link}
-              selectedLink={selectedLink}
-              setSelectedLink={setSelectedLink}
+              selectedPage={selectedPage}
+              setSelectedPage={setSelectedPage}
             />
           </li>
         ))}
