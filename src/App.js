@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, ScrollRestoration } from 'react-router-dom';
 
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
@@ -14,17 +14,17 @@ function App() {
 
   return (
     <Router>
-      <div className="app bg-deep-blue">
-        <NavBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-        <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-        <SocialLinks />
-      </div>
+        <div className="app bg-deep-blue">
+          <NavBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
+          <Routes strict={true}>
+            <Route path="/home" exact element={<Home />} />
+            <Route path="/about" exact element={<About />} />
+            <Route path="/portfolio" exact element={<Portfolio />} />
+            <Route path="/experience" exact element={<Experience />} />
+            <Route path="/contact" exact element={<Contact />} />
+          </Routes>
+          <SocialLinks />
+        </div>
     </Router>
   );
 }

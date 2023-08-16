@@ -1,5 +1,4 @@
 import React from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom'; // Import specific components as needed
 import portrait from '../assets/portrait.png';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
@@ -18,12 +17,12 @@ const Home = () => {
             Third year computer science, statistics, and data science student. I have experience in Typescript, Java, Python, C, and SQL.
           </p>
           <div className="mt-4">
-            <Link to="/portfolio" className="group text-white px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-violet-400 to-purple-500 cursor-pointer">
+            <a href="/portfolio" className="group text-white px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-violet-400 to-purple-500 cursor-pointer">
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
                 <MdKeyboardArrowRight size={25} className="ml-1" />
               </span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>
