@@ -1,14 +1,13 @@
 import React from 'react';
 import HeaderStyle from '../utilities/HeaderStyle';
+import picture from "../assets/picture.png";
 
 const About = () => {
     return (
-        <div name="about" className="w-full h-screen bg-gradient-to-b from-black to-blue-800 text-white">
-            <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+        <div name="about" className="w-full h-screen bg-gradient-to-b from-black to-blue-800 text-white flex">
+            <div className="max-w-screen-lg p-4 flex flex-col justify-center items-end w-1/2 pr-8">
                 <HeaderStyle headerText="about-me" />
-                <div className="py-8">
-                </div>
-                <p className="text-xl max-w-[75%] leading-relaxed">
+                <p className="text-xl max-w-[75%] leading-relaxed pt-8">
                     Welcome! I'm currently studying computer science, statistics, and data science student at the University of Massachusetts Amherst honors college.
                 </p>
                 <br />
@@ -18,8 +17,11 @@ const About = () => {
                 </p>
                 <br />
                 <p className="text-xl max-w-[75%] leading-relaxed">
-                A fun fact about me, I love languages! I am bilingual in English and Russian, can have a plausible conversation in Spanish and ancient Latin, and I am currently learning Hebrew and Ukranian.
+                A fun fact about me, I love languages! I am bilingual in English and Russian, can have a plausible conversation in Spanish and ancient Latin, and I am currently learning Hebrew and Ukrainian.
                 </p>
+            </div>
+            <div className="w-1/2 flex justify-center items-center pl-8">
+                <img src={picture} alt="My Picture" className="max-w-[50%] mx-auto rounded-3xl" />
             </div>
         </div>
     )
