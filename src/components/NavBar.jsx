@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+import useMediaQuery from "../hooks/useMediaQuery";
+import { Link as RouterLink } from "react-router-dom"; // Import Link from react-router-dom
 
-const Link = ({ link, selectedPage, setSelectedPage }) => {
+const Link = ({ link, selectedLink, setSelectedLink }) => {
   return (
-    <a
-      href={`/${link}`} // Assuming your paths are set up accordingly
-      className={`hover:text-purple-400 transition duration-200`}
-      onClick={() => setSelectedPage(link)}
+    <RouterLink
+      to={`/${link}`} // Assuming your paths are set up accordingly
+      className={`${selectedLink === link ? "text-purple-400" : ""
+        } hover:text-purple-400 transition duration-200`}
+      onClick={() => setSelectedLink(link)}
     >
       {link}
-    </a>
+    </RouterLink>
   );
 };
 
