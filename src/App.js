@@ -19,8 +19,8 @@ function App() {
           <Routes strict={true}>
             <Route path="/home" exact element={<Home />} />
             <Route path="/about" exact element={<About />} />
-            <Route path="/portfolio" exact element={<Portfolio />} />
             <Route path="/experience" exact element={<Experience />} />
+            <Route path="/portfolio" exact element={<Portfolio />} />
             <Route path="/contact" exact element={<Contact />} />
           </Routes>
           <SocialLinks />

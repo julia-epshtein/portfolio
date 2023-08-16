@@ -1,15 +1,13 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-import useMediaQuery from "../hooks/useMediaQuery";
 import { Link as RouterLink } from "react-router-dom"; // Import Link from react-router-dom
 
 const Link = ({ link, selectedLink, setSelectedLink }) => {
   return (
     <RouterLink
-      to={`/${link}`} // Assuming your paths are set up accordingly
+      to={`/${link}`}
       className={`${selectedLink === link ? "text-purple-400" : ""
-        } hover:text-purple-400 transition duration-200`}
+        } hover:text-purple-400`}
       onClick={() => setSelectedLink(link)}
     >
       {link}
@@ -39,9 +37,9 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
   ];
 
   return (
-    <div className={"fixed top-0 flex justify-between items-center w-full h-20 px-4 text-white bg-black"}>
+    <div className={"fixed top-0 flex justify-between items-center w-full h-20 px-4 text-white"}>
       <div>
-        <h1 className={"text-5xl font-signature ml-2 text-purple-400"}>Julia Epshtein</h1>
+        <h1 className={"text-4xl font-signature ml-2 text-white"}>Julia Epshtein</h1>
       </div>
 
       {nav && (
