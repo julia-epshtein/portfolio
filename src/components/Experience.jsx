@@ -58,7 +58,7 @@ const Experience = () => {
   };
 
   return (
-    <div name="experience" className="bg-gradient-to-b from-black to-blue-950 w-full h-screen">
+    <div name="experience" className="bg-gradient-to-b from-black to-deep-blue w-full h-screen">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
           <HeaderStyle headerText="Tools and Technologies" />
@@ -72,7 +72,7 @@ const Experience = () => {
               initial="hidden"
               animate="visible"
               variants={boxVariants}
-              className={`flex shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              className={`hoscale-105 flex shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
             >
               <div className="flex items-start justify-center p-4">
                 {icon}

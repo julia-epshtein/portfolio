@@ -5,7 +5,7 @@ import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const Home = () => {
   return (
-    <div name="home" className="h-screen w-full bg-gradient-to-b from-black via-deep-blue to-blue-960">
+    <div name="home" className="h-screen w-full bg-gradient-to-b from-black to-deep-blue">
       <div className="max-w-screen-lg mx-auto flex flex-col md:flex-row-reverse items-center justify-center h-full px-4">
         <div class="relative z-0 ml-20 before:absolute before:-top-10 before:-left-10 before:rounded-t-[400px] before:w-full md:before:max-w-[500px] before:h-full before:border-2 before:border-purple-400 before:z-[-1]">
           <img src={picture} alt="my profile" class="rounded-t-full w-56 md:w-80 mx-auto md:ml-8 " />

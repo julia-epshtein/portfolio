@@ -6,7 +6,7 @@ import mannings from "../assets/mannings.jpg";
 
 const About = () => {
     return (
-        <div name="about" className="w-full h-screen bg-gradient-to-b from-blue-960 via-deep-blue to-black text-white flex flex-col-reverse md:flex-row">
+        <div name="about" className="w-full h-screen bg-gradient-to-b from-deep-blue to-black text-white flex flex-col-reverse md:flex-row">
             <div className="max-w-screen-lg mx-auto p-4 md:flex md:items-center md:justify-center h-full md:px-4">
                 <div className="md:w-1/2 md:pr-8">
                     <HeaderStyle headerText="about-me" />
@@ -38,7 +38,7 @@ const Paragraph = ({ children }) => (
 );
 
 const Image = ({ src, alt }) => (
-    <div className="relative w-[50%] max-h-[28%] mx-auto rounded">
+    <div className="relative w-[50%] max-h-[25%] mx-auto rounded">
         <img src={src} alt={alt} className="w-full h-full object-cover rounded-xl" />
     </div>
 );
