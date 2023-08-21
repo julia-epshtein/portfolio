@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Routes, ScrollRestoration } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
@@ -13,19 +13,25 @@ function App() {
   const [selectedPage, setSelectedPage] = useState('home');
 
   return (
-    <Router>
+    <BrowserRouter>
         <div className="app bg-deep-blue">
           <NavBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-          <Routes strict={true}>
+          <Home />
+          <About />
+          <Experience />
+          <Portfolio />
+          <Contact />
+          <SocialLinks />
+          {/* <Routes strict={true}>
             <Route path="/home" exact element={<Home />} />
             <Route path="/about" exact element={<About />} />
             <Route path="/experience" exact element={<Experience />} />
             <Route path="/portfolio" exact element={<Portfolio />} />
             <Route path="/contact" exact element={<Contact />} />
           </Routes>
-          <SocialLinks />
+          <SocialLinks /> */}
         </div>
-    </Router>
+    </BrowserRouter>
   );
 }
 
