@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link as RouterLink } from "react-router-dom"; // Import Link from react-router-dom
+import { Link as RouterLink } from "react-router-dom";
 
 const Link = ({ link, selectedLink, setSelectedLink }) => {
   return (
     <RouterLink
-      to={`/${link}`}
+      to={link}  
       className={`${selectedLink === link ? "text-purple-400" : ""
         } hover:text-purple-400`}
       onClick={() => setSelectedLink(link)}
@@ -15,7 +15,7 @@ const Link = ({ link, selectedLink, setSelectedLink }) => {
   );
 };
 
-const NavBar = ({ selectedPage, setSelectedPage }) => {
+const NavBar = ({ selectedLink, setSelectedLink }) => {
   const [nav, setNav] = useState(false);
 
   const links = [
@@ -37,7 +37,7 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
   ];
 
   return (
-    <div className={"fixed top-0 flex justify-between items-center w-full h-20 px-4 text-white"}>
+    <div className={"fixed top-0 z-50 flex justify-between items-center w-full h-20 px-4 text-white bg-black"}>
       <div>
         <h1 className={"text-4xl font-signature ml-2 text-white"}>Julia Epshtein</h1>
       </div>
@@ -48,8 +48,8 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
             <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
               <Link
                 link={link}
-                selectedPage={selectedPage}
-                setSelectedPage={setSelectedPage}
+                selectedLink={selectedLink}
+                setSelectedLink={setSelectedLink}
               />
             </li>
           ))}
@@ -69,8 +69,8 @@ const NavBar = ({ selectedPage, setSelectedPage }) => {
           >
             <Link
               link={link}
-              selectedPage={selectedPage}
-              setSelectedPage={setSelectedPage}
+              selectedLink={selectedLink}
+              setSelectedLink={setSelectedLink}
             />
           </li>
         ))}

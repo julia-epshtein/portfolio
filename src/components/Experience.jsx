@@ -1,88 +1,96 @@
 import React from "react";
 import HeaderStyle from '../utilities/HeaderStyle';
-
-import html from "../assets/html.png";
-import css from "../assets/css.png";
-import javascript from "../assets/javascript.png";
-import reactImage from "../assets/react.png";
-import nextjs from "../assets/nextjs.png";
-import graphql from "../assets/graphql.png";
-import github from "../assets/github.png";
-import tailwind from "../assets/tailwind.png";
+import { BsFillBookmarkCheckFill } from "react-icons/bs";
+import { FaLaptopCode } from "react-icons/fa";
+import { FaTools } from "react-icons/fa";
+import { FaChartBar } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const Experience = () => {
 
   const techs = [
     {
       id: 1,
-      src: html,
-      title: "HTML",
-      style: "shadow-orange-500",
+      title: "Coursework",
+      items: [
+        "Algorithms",
+        "Data Structures",
+        "Machine Learning",
+        "Software Engineering",
+        "Database Management",
+        "Programming Methodology",
+        "Statistics",
+        "Discrete Math",
+        "Linear Algebra",
+        "Multivariate Calculus",
+        "Abstract Algebra",
+        "Computer Systems Principles",
+      ],
+      icon: <BsFillBookmarkCheckFill size={40} />,
+      style: "shadow-pink-500",
     },
     {
       id: 2,
-      src: css,
-      title: "CSS",
-      style: "shadow-blue-500",
+      title: "Languages",
+      items: "Javascript, Typescript, Java, Python, C/C++, SQL, HTML, CSS, MATLAB",
+      icon: <FaLaptopCode size={40} />,
+      style: "shadow-red-500",
     },
     {
       id: 3,
-      src: javascript,
-      title: "JavaScript",
-      style: "shadow-yellow-500",
+      title: "Developer Tools & Libraries",
+      items: "GitHub, Git, React, Tailwind, Jupyter, Anaconda, Google Colab, Notion, Confluence",
+      icon: <FaTools size={40} />,
+      style: "shadow-purple-500",
     },
     {
       id: 4,
-      src: reactImage,
-      title: "React",
-      style: "shadow-blue-600",
-    },
-    {
-      id: 5,
-      src: tailwind,
-      title: "Tailwind",
-      style: "shadow-sky-400",
-    },
-    {
-      id: 6,
-      src: nextjs,
-      title: "Next JS",
-      style: "shadow-white",
-    },
-    {
-      id: 7,
-      src: graphql,
-      title: "GraphQL",
-      style: "shadow-pink-400",
-    },
-    {
-      id: 8,
-      src: github,
-      title: "GitHub",
-      style: "shadow-gray-400",
+      title: "Frameworks and Development",
+      items: "NumPy, Pandas, SciPy, Sci-Kit, Linux, Windows, MacOS, Kubernetes, Docker",
+      icon: <FaChartBar size={40} />,
+      style: "shadow-blue-500",
     },
   ];
 
+  const boxVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
   return (
-    <div
-      name="experience"
-      className="bg-gradient-to-b from-gray-800 to-black w-full h-screen"
-    >
+    <div name="experience" className="bg-gradient-to-b from-black to-blue-950 w-full h-screen">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
-          <HeaderStyle headerText="experience" />
-          <p className="py-6">These are the technologies I've worked with</p>
+          <HeaderStyle headerText="Tools and Technologies" />
+          <p className="py-6">Here are the tools and technologies I have experience in.</p>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
-          {techs.map(({ id, src, title, style }) => (
-            <div
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-8 px-4 sm:px-0">
+          {techs.map(({ id, title, items, icon, style }) => (
+            <motion.div
               key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              initial="hidden"
+              animate="visible"
+              variants={boxVariants}
+              className={`flex shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
             >
-              <img src={src} alt="" className="w-20 mx-auto" />
-              <p className="mt-4">{title}</p>
-            </div>
+              <div className="flex items-start justify-center p-4">
+                {icon}
+              </div>
+              <div className="flex flex-col justify-start p-4 w-full">
+                <h2 className="font-bold text-lg">{title}</h2>
+                <ul className="mt-2">
+                  {Array.isArray(items)
+                    ? items.map((course, index) => (
+                      <li key={index} className="mt-1">
+                        {course}
+                      </li>
+                    ))
+                    : <p className="mt-2">{items}</p>
+                  }
+                </ul>
+              </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -91,4 +99,3 @@ const Experience = () => {
 };
 
 export default Experience;
-
