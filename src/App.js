@@ -10,19 +10,18 @@ import Contact from "./components/Contact";
 import SocialLinks from "./components/SocialLinks";
 
 function App() {
-  const [selectedPage, setSelectedPage] = useState('home');
 
   return (
     <BrowserRouter>
-        <div className="app bg-deep-blue">
-          <NavBar selectedPage={selectedPage} setSelectedPage={setSelectedPage} />
-          <Home />
-          <About />
-          <Experience />
-          <Portfolio />
-          <Contact />
-          <SocialLinks />
-        </div>
+      <div className="bg-deep-blue">
+        <div><NavBar /></div>
+        <div><Home /></div>
+        <div><About /></div>
+        <div><Experience /></div>
+        <div><Portfolio /></div>
+        <div><Contact /></div>
+        <SocialLinks />
+      </div>
     </BrowserRouter>
   );
 }

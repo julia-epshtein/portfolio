@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 const Contact = () => {
 
     return (
-        <div name="contact" className="bg-gradient-to-b from-black via-black to-gray-800 w-full text-white md:h-screen">
-            <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+        <div name="contact" className="w-full bg-gradient-to-b from-black via-black to-deep-blue text-white md:h-screen">
+            <div className="max-w-screen-lg w-full p-4 mx-auto flex flex-col justify-center">
                 <div className="pb-8">
                     <HeaderStyle headerText="contact" />
                     <p className="py-6">Submit the form below to get in touch with me</p>

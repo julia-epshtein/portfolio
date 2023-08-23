@@ -5,9 +5,8 @@ import { Link as RouterLink } from "react-router-dom";
 const Link = ({ link, selectedLink, setSelectedLink }) => {
   return (
     <RouterLink
-      to={link}  
-      className={`${selectedLink === link ? "text-purple-400" : ""
-        } hover:text-purple-400`}
+      to={`/${link}`}
+      className={`${selectedLink === link ? "text-purple-400" : ""} hover:text-purple-400`}
       onClick={() => setSelectedLink(link)}
     >
       {link}
@@ -15,8 +14,9 @@ const Link = ({ link, selectedLink, setSelectedLink }) => {
   );
 };
 
-const NavBar = ({ selectedLink, setSelectedLink }) => {
+const NavBar = () => {
   const [nav, setNav] = useState(false);
+  const [selectedPage, setSelectedPage] = useState("home");
 
   const links = [
     {
@@ -37,7 +37,7 @@ const NavBar = ({ selectedLink, setSelectedLink }) => {
   ];
 
   return (
-    <div className={"fixed top-0 z-50 flex justify-between items-center w-full h-20 px-4 text-white bg-black"}>
+    <div className={"fixed top-0 flex justify-between items-center w-full h-20 px-4 text-white bg-black"}>
       <div>
         <h1 className={"text-4xl font-signature ml-2 text-white"}>Julia Epshtein</h1>
       </div>
@@ -48,8 +48,8 @@ const NavBar = ({ selectedLink, setSelectedLink }) => {
             <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
               <Link
                 link={link}
-                selectedLink={selectedLink}
-                setSelectedLink={setSelectedLink}
+                selectedLink={selectedPage}
+                setSelectedLink={setSelectedPage}
               />
             </li>
           ))}
@@ -69,8 +69,8 @@ const NavBar = ({ selectedLink, setSelectedLink }) => {
           >
             <Link
               link={link}
-              selectedLink={selectedLink}
-              setSelectedLink={setSelectedLink}
+              selectedLink={selectedPage}
+              setSelectedLink={setSelectedPage}
             />
           </li>
         ))}

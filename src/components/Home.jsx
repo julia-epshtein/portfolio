@@ -1,6 +1,5 @@
 import React from 'react';
-import portrait from '../assets/portrait.png';
-import picture from '../assets/picture.png';
+import picture from '../assets/me/picture.png';
 import { MdKeyboardArrowRight } from 'react-icons/md';
 
 const Home = () => {
