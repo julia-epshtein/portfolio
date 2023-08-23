@@ -1,19 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HeaderStyle from '../utilities/HeaderStyle';
 import dance from "../assets/me/dance.jpg";
 import ucsdprofile from "../assets/me/ucsdprofile.jpg";
 import mannings from "../assets/me/mannings.jpg";
-import { motion } from 'framer-motion';
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+    const controls = useAnimation();
+    const [ref, inView] = useInView();
+
+    useEffect(() => {
+        if (inView) {
+            controls.start("visible");
+        }
+    }, [controls, inView]);
+
+    const fadeInVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.4 } }
+    };
+
     return (
         <div name="about" className="w-full h-screen bg-gradient-to-b from-deep-blue to-black text-white flex flex-col-reverse md:flex-row">
             <div className="w-full h-full max-w-screen-lg mx-auto p-4 md:flex md:items-center md:justify-center md:px-4">
                 <div className="md:w-1/2 md:pr-8">
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.4 }}
+                        ref={ref}
+                        initial="hidden"
+                        animate={controls}
+                        variants={fadeInVariants}
                     >
                         <HeaderStyle headerText="about-me" />
                         <Paragraph>
@@ -29,13 +45,13 @@ const About = () => {
                     </motion.div>
                 </div>
                 <div className="md:w-1/2 flex flex-col justify-end md:justify-center items-center px-8 space-y-4">
-                        <Image src={mannings} alt="My Picture" />
-                        <Image src={dance} alt="Dance" />
-                        <Image src={ucsdprofile} alt="UCSD Profile" />
+                    <Image src={mannings} alt="My Picture" />
+                    <Image src={dance} alt="Dance" />
+                    <Image src={ucsdprofile} alt="UCSD Profile" />
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 const Paragraph = ({ children }) => (
