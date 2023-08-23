@@ -61,7 +61,7 @@ const Experience = () => {
     <div name="experience" className="bg-gradient-to-b from-black to-deep-blue w-full h-screen">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
         <div>
-          <HeaderStyle headerText="Tools and Technologies" />
+          <HeaderStyle headerText="Technologies" />
           <p className="py-6">Here are the tools and technologies I have experience in.</p>
         </div>
 
