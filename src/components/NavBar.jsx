@@ -48,8 +48,7 @@ const NavBar = () => {
             <li className="px-4 cursor-pointer capitalize py-6 text-4xl">
               <Link
                 link={link}
-                selectedLink={selectedPage}
-                setSelectedLink={setSelectedPage}
+                setSelectedLink={link}
               />
             </li>
           ))}
@@ -69,8 +68,7 @@ const NavBar = () => {
           >
             <Link
               link={link}
-              selectedLink={selectedPage}
-              setSelectedLink={setSelectedPage}
+              setSelectedLink={link}
             />
           </li>
         ))}
