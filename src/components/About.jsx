@@ -45,7 +45,7 @@ const About = () => {
                         </Paragraph>
                     </motion.div>
                 </div>
-                <div className="md:w-1/2 flex md:justify-end items-center md:flex-col md:space-y-4 px-8 space-x-4 md:space-x-0">
+                <div className="md:w-1/2 flex md:justify-end items-center md:flex-col md:space-y-4 px-8 space-x-4 md:space-x-0 py-12">
                     <Image src={mannings} alt="My Picture" />
                     <Image src={dance} alt="Dance" />
                     <Image src={ucsdprofile} alt="UCSD Profile" />
