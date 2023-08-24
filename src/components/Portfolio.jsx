@@ -44,8 +44,8 @@ const TimelineElement = ({ date, title, subtitle, description, skills, icon }) =
 
 const Portfolio = () => {
     return (
-        <div name="portfolio" className="w-full bg-gradient-to-b from-deep-blue to-black text-white">
-            <div className="w-full max-w-screen-lg mx-auto flex flex-col justify-center">
+        <div name="portfolio" className="w-full bg-gradient-to-b from-deep-blue to-black text-white pt-40">
+            <div className="w-full max-w-screen-lg mx-auto flex flex-col justify-center pt-20">
                 <HeaderStyle headerText="Projects and Experience" />
                 <div className="w-full mt-20 flex flex-col">
                     <div className="vertical-timeline-container pb-40">

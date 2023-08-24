@@ -58,26 +58,26 @@ const Experience = () => {
   };
 
   return (
-    <div name="experience" className="bg-gradient-to-b from-black to-deep-blue w-full h-screen">
-      <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
+    <div name="experience" className="bg-gradient-to-b from-black to-deep-blue w-full">
+    <div className="max-w-screen-lg mx-auto pb-20 text-white pt-40">
         <div>
-          <HeaderStyle headerText="Technologies" />
+  <HeaderStyle headerText="Technologies" />
           <p className="py-6">Here are the tools and technologies I have experience in.</p>
-        </div>
+          </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-8 px-4 sm:px-8">
+                    {techs.map(({ id, title, items, icon, style }) => (
+                        <motion.div
+                            key={id}
+                            initial="hidden"
+                            animate="visible"
+                            variants={boxVariants}
+                            className={`hoscale-105 flex shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+                        >
+                            <div className="flex items-start justify-center p-4">
+                                {icon}
+                            </div>
+                            <div className="flex flex-col justify-start p-4 w-full">
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-8 px-4 sm:px-0">
-          {techs.map(({ id, title, items, icon, style }) => (
-            <motion.div
-              key={id}
-              initial="hidden"
-              animate="visible"
-              variants={boxVariants}
-              className={`hoscale-105 flex shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-            >
-              <div className="flex items-start justify-center p-4">
-                {icon}
-              </div>
-              <div className="flex flex-col justify-start p-4 w-full">
                 <h2 className="font-bold text-lg">{title}</h2>
                 <ul className="mt-2">
                   {Array.isArray(items)

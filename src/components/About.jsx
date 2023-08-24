@@ -22,9 +22,10 @@ const About = () => {
     };
 
     return (
-        <div name="about" className="w-full h-screen bg-gradient-to-b from-deep-blue to-black text-white flex flex-col-reverse md:flex-row">
-            <div className="w-full h-full max-w-screen-lg mx-auto p-4 md:flex md:items-center md:justify-center md:px-4">
+        <div name="about" className="w-full bg-gradient-to-b from-deep-blue to-black text-white">
+            <div className="max-w-screen-lg mx-auto p-4 md:flex md:items-center">
                 <div className="md:w-1/2 md:pr-8">
+
                     <motion.div
                         ref={ref}
                         initial="hidden"
@@ -44,7 +45,7 @@ const About = () => {
                         </Paragraph>
                     </motion.div>
                 </div>
-                <div className="md:w-1/2 flex flex-col justify-end md:justify-center items-center px-8 space-y-4">
+                <div className="md:w-1/2 flex md:justify-end items-center md:flex-col md:space-y-4 px-8 space-x-4 md:space-x-0">
                     <Image src={mannings} alt="My Picture" />
                     <Image src={dance} alt="Dance" />
                     <Image src={ucsdprofile} alt="UCSD Profile" />
