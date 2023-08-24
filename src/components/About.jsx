@@ -32,7 +32,7 @@ const About = () => {
                         animate={controls}
                         variants={fadeInVariants}
                     >
-                        <HeaderStyle headerText="about-me" />
+                        <HeaderStyle headerText="About Me" />
                         <Paragraph>
                             Welcome! I'm currently studying computer science, statistics, and data science student at the University of Massachusetts Amherst honors college.
                         </Paragraph>
