@@ -13,7 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
+      <div className="bg-deep-blue">
         <div><NavBar /></div>
         <div><Home /></div>
         <div><About /></div>
