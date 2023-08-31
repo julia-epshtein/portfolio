@@ -1,10 +1,9 @@
 import React, { useEffect } from 'react';
-import HeaderStyle from '../utilities/HeaderStyle';
-import dance from "../assets/me/dance.jpg";
-import ucsdprofile from "../assets/me/ucsdprofile.jpg";
-import mannings from "../assets/me/mannings.jpg";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+
+import HeaderStyle from '../utilities/HeaderStyle';
+import ucsdprofile from "../assets/me/ucsdprofile.jpg";
 
 const About = () => {
     const controls = useAnimation();
@@ -25,7 +24,6 @@ const About = () => {
         <div name="about" className="w-full bg-gradient-to-b from-deep-blue to-black text-white">
             <div className="max-w-screen-lg mx-auto p-4 md:flex md:items-center">
                 <div className="md:w-1/2 md:pr-8">
-
                     <motion.div
                         ref={ref}
                         initial="hidden"
@@ -34,20 +32,11 @@ const About = () => {
                     >
                         <HeaderStyle headerText="About Me" />
                         <Paragraph>
-                            Welcome! I'm currently studying computer science, statistics, and data science student at the University of Massachusetts Amherst honors college.
-                        </Paragraph>
-                        <Paragraph>
-                            Other than my working in Frontend, Software Development, and computer science education, I love to ballroom dance.
-                            I perform in showcases and dance competitively, and I was the captain of the UMass Ballroom Dance Team before I moved on to the Executive Board of the UMass Recreational Math Club.
-                        </Paragraph>
-                        <Paragraph>
-                            A fun fact about me, I love languages! I am bilingual in English and Russian, can have a super basic conversation in Spanish and ancient Latin, and I am currently learning Hebrew and Ukrainian.
+                            I am an honors CS & Data Science student at UMass. I have experience building React Apps, developing coursework, and teaching computer science and math, and I'm interested in frontend development, machine learning, and exploring the intersection between computer science and education. At UC San Diego, I'm researching the reliability of spreadsheet software at UC San Diego by developing and piloting a custom Jupyter Notebooks Widget using Python, React, and the Javascript AG-Grid framework. I am also a course assistant for CS 240: Reasoning Under Uncertainty and a math tutor at the Russian School of Math.
                         </Paragraph>
                     </motion.div>
                 </div>
                 <div className="md:w-1/2 flex md:justify-end items-center md:flex-col md:space-y-4 px-8 space-x-4 md:space-x-0 py-12">
-                    <Image src={mannings} alt="My Picture" />
-                    <Image src={dance} alt="Dance" />
                     <Image src={ucsdprofile} alt="UCSD Profile" />
                 </div>
             </div>
@@ -62,7 +51,7 @@ const Paragraph = ({ children }) => (
 );
 
 const Image = ({ src, alt }) => (
-    <div className="relative w-[40%] max-h-[25%] mx-auto rounded">
+    <div className="relative w-[40%] md:w-[75%] max-h-[40%] mx-auto rounded">
         <img src={src} alt={alt} className="w-full h-full object-cover rounded-xl" />
     </div>
 );
