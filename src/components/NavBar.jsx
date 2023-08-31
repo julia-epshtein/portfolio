@@ -16,7 +16,6 @@ const Link = ({ link, selectedLink, setSelectedLink }) => {
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-  const [selectedPage, setSelectedPage] = useState("home");
 
   const links = [
     {
