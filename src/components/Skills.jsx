@@ -26,7 +26,10 @@ const Skills = () => {
         "Computer Systems Principles",
       ],
       icon: <BsFillBookmarkCheckFill size={40} />,
-      style: "shadow-pink-500",
+      style: {
+        border: "1px solid #ff66b2", 
+        boxShadow: "0 0 6px #ff66b2", 
+      },
     },
     {
       id: 2,
@@ -43,7 +46,10 @@ const Skills = () => {
         "MATLAB",
       ],
       icon: <FaLaptopCode size={40} />,
-      style: "shadow-red-500",
+      style: {
+        border: "1px solid #ff0000", 
+        boxShadow: "0 0 6px #ff0000", 
+      },
     },
     {
       id: 3,
@@ -60,7 +66,10 @@ const Skills = () => {
         "Confluence",
       ],
       icon: <FaTools size={40} />,
-      style: "shadow-purple-500",
+      style: {
+        border: "1px solid #800080", 
+        boxShadow: "0 0 6px #800080", 
+      },
     },
     {
       id: 4,
@@ -77,20 +86,21 @@ const Skills = () => {
         "Docker",
       ],
       icon: <FaChartBar size={40} />,
-      style: "shadow-blue-500",
+      style: {
+        border: "1px solid #0000ff", 
+        boxShadow: "0 0 6px #0000ff", 
+      },
     },
   ];
 
   const boxVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    hover: { scale: 1.05 }, // Scale up on hover
   };
 
   return (
-    <div
-      name="skills"
-      className="bg-gradient-to-b from-black to-deep-blue w-full"
-    >
+    <div name="skills" className="bg-gradient-to-b from-black to-deep-blue w-full">
       <div className="max-w-screen-lg mx-auto pb-20 text-white pt-40">
         <div>
           <HeaderStyle headerText="Skills" />
@@ -105,7 +115,9 @@ const Skills = () => {
               initial="hidden"
               animate="visible"
               variants={boxVariants}
-              className={`hoscale-105 flex shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
+              whileHover="hover" 
+              className={`hoscale-105 flex duration-500 py-2 rounded-lg`}
+              style={style}
             >
               <div className="flex items-start justify-center p-4">{icon}</div>
               <div className="flex flex-col justify-start p-4 w-full">
