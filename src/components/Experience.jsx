@@ -1,129 +1,126 @@
-import React from "react";
-import HeaderStyle from "../utilities/HeaderStyle";
-import { BsFillBookmarkCheckFill } from "react-icons/bs";
-import { FaLaptopCode } from "react-icons/fa";
-import { FaTools } from "react-icons/fa";
-import { FaChartBar } from "react-icons/fa";
-import { motion } from "framer-motion";
+import React from 'react';
+import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import 'react-vertical-timeline-component/style.min.css';
+
+import cseIcon from "../assets/companies/cseIcon.jpg";
+import cics from "../assets/companies/cics.png";
+import wearableLearning from "../assets/companies/wearableLearning.png";
+import rtc from "../assets/companies/rtc.jpg";
+import rsm from "../assets/companies/rsm.jpg";
+import ials from "../assets/companies/ials.png";
+import hospital from "../assets/companies/hospital.jpg";
+
+import HeaderStyle from '../utilities/HeaderStyle';
+
+const TimelineElement = ({ date, title, subtitle, description, skills, icon }) => (
+    <VerticalTimelineElement
+        className="vertical-timeline-element--work"
+        contentStyle={{
+            background: '#966fd6',
+            color: 'black',
+            boxShadow: '0 3px 10px rgba(0, 0, 0, 0.2)',
+            borderRadius: '10px',
+        }}
+        date={
+            <div>
+                <h3 className="text-white text-[18px] font-bold">
+                    {date}
+                </h3>
+            </div>
+        }
+        contentArrowStyle={{
+            borderRight: '7px solid #966fd6',
+        }}
+        iconStyle={{ backgroundImage: `url(${icon})`, backgroundSize: "cover" }}
+    >
+        <h3 className="vertical-timeline-element-title" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{title}</h3>
+        <h4 className="vertical-timeline-element-subtitle" style={{ fontStyle: 'italic' }}>{subtitle}</h4>
+        <p>{description}</p>
+        {skills && <p>Skills: {skills}</p>}
+    </VerticalTimelineElement>
+);
+
+
 
 const Experience = () => {
-  const techs = [
-    {
-      id: 1,
-      title: "Coursework",
-      items: [
-        "Algorithms",
-        "Data Structures",
-        "Machine Learning",
-        "Software Engineering",
-        "Database Management",
-        "Programming Methodology",
-        "Statistics",
-        "Discrete Math",
-        "Linear Algebra",
-        "Multivariate Calculus",
-        "Abstract Algebra",
-        "Computer Systems Principles",
-      ],
-      icon: <BsFillBookmarkCheckFill size={40} />,
-      style: "shadow-pink-500",
-    },
-    {
-      id: 2,
-      title: "Languages",
-      items: [
-        "Javascript",
-        "Typescript",
-        "Java",
-        "Python",
-        "C/C++",
-        "SQL",
-        "HTML",
-        "CSS",
-        "MATLAB",
-      ],
-      icon: <FaLaptopCode size={40} />,
-      style: "shadow-red-500",
-    },
-    {
-      id: 3,
-      title: "Developer Tools & Libraries",
-      items: [
-        "GitHub",
-        "Git",
-        "React",
-        "Tailwind",
-        "Jupyter",
-        "Anaconda",
-        "Google Colab",
-        "Notion",
-        "Confluence",
-      ],
-      icon: <FaTools size={40} />,
-      style: "shadow-purple-500",
-    },
-    {
-      id: 4,
-      title: "Frameworks & Development",
-      items: [
-        "NumPy",
-        "Pandas",
-        "SciPy",
-        "Sci-Kit",
-        "Linux",
-        "Windows",
-        "MacOS",
-        "Kubernetes",
-        "Docker",
-      ],
-      icon: <FaChartBar size={40} />,
-      style: "shadow-blue-500",
-    },
-  ];
+    return (
+        <div name="experience" className="w-full bg-gradient-to-b from-deep-blue to-black text-white pt-40">
+            <div className="w-full max-w-screen-lg mx-auto flex flex-col justify-center pt-20">
+                <HeaderStyle headerText="Experience" />
+                <div className="w-full mt-20 flex flex-col">
+                    <div className="vertical-timeline-container pb-40">
+                        <VerticalTimeline>
+                            {/* Research Intern */}
+                            <TimelineElement
+                                date="JUN 2023 - PRESENT"
+                                title="Research Intern"
+                                subtitle="UCSD CSE"
+                                description="Implemented a feature for the Kale Jupyter Notebooks Widget that allows users to assign custom names to cells and reference them through formulas, and designed pilot studies."
+                                skills="JavaScript, React.js, TypeScript, Jupyter, Git, Python"
+                                icon={cseIcon}
+                            />
 
-  const boxVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  };
+                            {/* Undergraduate Course Assistant */}
+                            <TimelineElement
+                                date="SEP 2022 - PRESENT"
+                                title="Undergraduate Course Assistant"
+                                subtitle="UMass CICS"
+                                description="Grade over 250 assignments on a weekly basis and help students grasp statistics concepts for CS 240: Reasoning Under Uncertainty."
+                                icon={cics}
+                            />
 
-  return (
-    <div
-      name="experience"
-      className="bg-gradient-to-b from-black to-deep-blue w-full"
-    >
-      <div className="max-w-screen-lg mx-auto pb-20 text-white pt-40">
-        <div>
-          <HeaderStyle headerText="Technologies" />
-          <p className="py-6">
-            Here are the tools and technologies I have experience in.
-          </p>
+                            {/* Undergraduate Researcher */}
+                            <TimelineElement
+                                date="SEP 2022 - MAY 2023"
+                                title="Undergraduate Researcher"
+                                subtitle="Wearable Learning"
+                                description="Analyzed data using natural language processing to understand gameplay processes and the development of computational thinking skills in the Wearable Learning platform."
+                                skills="Git, LaTeX, BERT, NLP, Technical Writing, Python"
+                                icon={wearableLearning}
+                            />
+
+                            {/* Member, Rewriting the Code */}
+                            <TimelineElement
+                                date="SEP 2021 - PRESENT"
+                                title="Member"
+                                subtitle="Rewriting the Code"
+                                description="Part of the largest peer-to-peer network of women in tech, providing support, mentorship, and education for sustainable careers and equal opportunities."
+                                icon={rtc}
+                            />
+
+                            {/* Mathematics Tutor */}
+                            <TimelineElement
+                                date="NOV 2018 - PRESENT"
+                                title="Mathematics Tutor"
+                                subtitle="Russian School of Math"
+                                description="Tutor students in grades K-12, lead SAT workshops, and tailor math instruction to meet individual learning styles."
+                                icon={rsm}
+                            />
+
+                            {/* Research Intern */}
+                            <TimelineElement
+                                date="MAY 2022 - AUG 2022"
+                                title="Research Intern"
+                                subtitle="UMass Institute for Applied Life Sciences"
+                                description="Determined the accuracy of an insole that classifies events based on foot orientation during walking, tracked human motion, built models, processed data, and tested accuracy through MATLAB."
+                                skills="REDCap, Visual3D, MATLAB, StepScan, Qualisys, Research, Python"
+                                icon={ials}
+                            />
+
+                            {/* Liver Patient Prediction */}
+                            <TimelineElement
+                                date="MAY 2022 - AUG 2022"
+                                title="Liver Patient Prediction"
+                                subtitle="Project"
+                                description="Predicted liver disease using classification methods with supervised machine learning algorithms, achieving 86% accuracy."
+                                icon={hospital}
+                            />
+                        </VerticalTimeline>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 py-8 px-4 sm:px-8">
-          {techs.map(({ id, title, items, icon, style }) => (
-            <motion.div
-              key={id}
-              initial="hidden"
-              animate="visible"
-              variants={boxVariants}
-              className={`hoscale-105 flex shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-            >
-              <div className="flex items-start justify-center p-4">{icon}</div>
-              <div className="flex flex-col justify-start p-4 w-full">
-                <h2 className="font-bold text-lg">{title}</h2>
-                <ul className="mt-2">
-                  {items.map((course, index) => (
-                    <li key={index} className="mt-1">
-                      {course}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+    );
+}
 
 export default Experience;

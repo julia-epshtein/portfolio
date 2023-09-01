@@ -4,7 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Home from "./components/Home";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
-import Portfolio from "./components/Portfolio";
+import Skills from "./components/Skills";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import SocialLinks from "./components/SocialLinks";
@@ -17,8 +17,8 @@ function App() {
         <div><NavBar /></div>
         <div><Home /></div>
         <div><About /></div>
+        <div><Skills /></div>
         <div><Experience /></div>
-        <div><Portfolio /></div>
         <div><Contact /></div>
         <SocialLinks />
       </div>
