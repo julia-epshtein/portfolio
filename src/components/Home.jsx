@@ -1,6 +1,7 @@
 import React from 'react';
 import picture from '../assets/me/picture.png';
 import { MdKeyboardArrowRight } from 'react-icons/md';
+import { Link as ScrollLink } from "react-scroll";
 
 const Home = () => {
   return (
@@ -17,12 +18,18 @@ const Home = () => {
             CS & Math student passionate in software development, machine learning, and the intersection of computer science and education.
           </p>
           <div className="mt-4">
-            <a href="/portfolio" className="group text-white px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-violet-400 to-purple-700 cursor-pointer" >
-              Portfolio
+            <ScrollLink
+              to="experience" 
+              spy={true}
+              smooth={true}
+              duration={500}
+              className="group text-white px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-violet-400 to-purple-700 cursor-pointer"
+            >
+              Experience
               <span className="group-hover:rotate-90 duration-300">
                 <MdKeyboardArrowRight size={25} className="ml-1" />
               </span>
-            </a>
+            </ScrollLink>
           </div>
         </div>
       </div>
