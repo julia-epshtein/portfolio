@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link as ScrollLink, Element } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 const Link = ({ link, selectedLink, setSelectedLink }) => {
   const handleClick = () => {
@@ -13,7 +13,8 @@ const Link = ({ link, selectedLink, setSelectedLink }) => {
       spy={true}
       smooth={true}
       duration={500}
-      className={`${selectedLink === link ? "text-purple-400" : ""} hover:text-purple-400`}
+      activeClass="text-purple-400"
+      className={`hover:text-purple-400`}
       onClick={handleClick}
     >
       {link}

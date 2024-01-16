@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Contact = () => {
     return (
-        <div name="contact" className="w-full bg-gradient-to-b from-black via-black to-deep-blue text-white pt-20">
+        <div name="contact" className="w-full h-screen bg-gradient-to-b from-black via-black to-deep-blue text-white pt-20">
             <div className="max-w-screen-lg w-full mx-auto flex flex-col justify-center">
                 <div className="pb-8">
                     <HeaderStyle headerText="Contact" />
