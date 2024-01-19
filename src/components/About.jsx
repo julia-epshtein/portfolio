@@ -21,7 +21,7 @@ const About = () => {
   };
 
   return (
-    <div name="about" className="w-full h-full bg-black text-white">
+    <div name="about" className="w-full h-full pb-12 bg-black text-white">
       <div className="max-w-screen-lg mx-auto p-4 md:flex md:items-center h-screen">
         <div className="md:w-1/2 flex md:justify-end items-center md:flex-col md:space-y-4 px-8 space-x-4 md:space-x-0 py-12">
           <Image src={ucsdprofile} alt="UCSD Profile" />
@@ -64,7 +64,7 @@ const Paragraph = ({ children }) => (
 );
 
 const Image = ({ src, alt }) => (
-  <div className="relative w-[50%] md:w-[80%] max-h-[60%]">
+  <div className="relative w-[60%] md:w-[80%] max-h-[60%]">
     <img
       src={src}
       alt={alt}
