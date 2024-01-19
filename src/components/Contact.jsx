@@ -8,7 +8,8 @@ const Contact = () => {
             <div className="max-w-screen-lg w-full mx-auto flex flex-col justify-center">
                 <div className="pb-8">
                     <div className = "pl-8"><HeaderStyle headerText="Contact" /></div>
-                    <p className="pt-8 pl-8 font-source font-bold text-black text-2xl">Submit the form below to get in touch with me!</p>
+                    <p className="pt-8 pl-8 font-source font-bold text-black text-2xl pb-2">Submit the form below to get in touch with me!</p>
+                    <p className="pl-8 font-source font-bold text-black text-2xl">Or email me at <a href="mailto:jepshtein@umass.edu" className="text-black font-source font-bold underline">jepshtein@umass.edu</a></p>
                 </div>
                 <div className="flex justify-start items-center p-8">
                     <div className="bg-neutral-800 rounded-3xl p-8 w-full md:w-3/4">
