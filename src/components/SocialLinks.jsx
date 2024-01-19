@@ -2,6 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
+import resume from "/Users/juliaepshtein/Desktop/portfolio/src/assets/me/resume.pdf"; 
 
 const SocialLinks = () => {
 
@@ -41,7 +42,7 @@ const SocialLinks = () => {
                     Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: require("/Users/juliaepshtein/Desktop/portfolio/src/resume.pdf"),
+            href: resume,
             style: 'rounded-bf-md',
             download: 'Julia-Epshtein-Resume.pdf', 
         }         
