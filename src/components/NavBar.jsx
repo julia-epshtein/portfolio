@@ -99,7 +99,7 @@ const NavBar = () => {
       {nav && (
         <ul className="flex flex-col justify-center items-center absolute top-0 right-0 w-full h-screen bg-gradient-to-b from-black to-deep-blue text-gray-500 font-source font-700">
           {links.map(({ link }) => (
-            <li className="px-4 cursor-pointer capitalize py-6 text-4xl" key={link}>
+            <li className="px-4 cursor-pointer capitalize py-6 text-4xl font-source" key={link}>
               <Link
                 link={link}
                 selectedLink={selectedLink}
@@ -119,7 +119,7 @@ const NavBar = () => {
       <ul className="hidden md:flex pr-4">
         {links.map(({ link }) => (
           <li
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
+            className="font-source px-4 cursor-pointer capitalize font-bold text-gray-500 hover:scale-105 duration-200"
             key={link}
           >
             <Link

@@ -22,7 +22,7 @@ const TimelineElement = ({ date, title, subtitle, description, skills, icon }) =
         }}
         date={
             <div>
-                <h3 className="text-white text-[18px] font-bold">
+                <h3 className="text-white text-[18px] font-source font-bold">
                     {date}
                 </h3>
             </div>
@@ -32,10 +32,10 @@ const TimelineElement = ({ date, title, subtitle, description, skills, icon }) =
         }}
         iconStyle={{ backgroundImage: `url(${icon})`, backgroundSize: "cover" }}
     >
-        <h3 className="vertical-timeline-element-title" style={{ fontSize: '1.5rem', fontWeight: 'bold' }}>{title}</h3>
-        <h4 className="vertical-timeline-element-subtitle" style={{ fontStyle: 'italic' }}>{subtitle}</h4>
-        <p>{description}</p>
-        {skills && <p>Skills: {skills}</p>}
+        <h3 className="vertical-timeline-element-title font-source font-bold text-3xl">{title}</h3>
+        <h4 className="vertical-timeline-element-subtitle italic font-paragraph">{subtitle}</h4>
+        <p className="font-paragraph">{description}</p>
+        {skills && <p className="font-paragraph">Skills: {skills}</p>}
     </VerticalTimelineElement>
 );
 
@@ -43,7 +43,7 @@ const TimelineElement = ({ date, title, subtitle, description, skills, icon }) =
 
 const Experience = () => {
     return (
-        <div name="experience" className="w-full bg-gradient-to-b from-deep-blue to-black text-white pt-40">
+        <div name="experience" className="w-full bg-deep-blue text-white">
             <div className="w-full max-w-screen-lg mx-auto flex flex-col justify-center pt-20">
                 <span className="pl-8"><HeaderStyle headerText="Experience" /></span>
                 <div className="w-full mt-20 flex flex-col">
@@ -51,7 +51,7 @@ const Experience = () => {
                         <VerticalTimeline>
                             {/* Research Intern */}
                             <TimelineElement
-                                date="JUN 2023 - PRESENT"
+                                date="JUN 2023 - AUG 2023"
                                 title="Research Intern"
                                 subtitle="UCSD CSE"
                                 description="Implemented a feature for the Kale Jupyter Notebooks Widget that allows users to assign custom names to cells and reference them through formulas, and designed pilot studies."
@@ -61,7 +61,7 @@ const Experience = () => {
 
                             {/* Undergraduate Course Assistant */}
                             <TimelineElement
-                                date="SEP 2022 - PRESENT"
+                                date="SEP 2022 - DEC 2023"
                                 title="Undergraduate Course Assistant"
                                 subtitle="UMass CICS"
                                 description="Grade over 250 assignments on a weekly basis and help students grasp statistics concepts for CS 240: Reasoning Under Uncertainty."

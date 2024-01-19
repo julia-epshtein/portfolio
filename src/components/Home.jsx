@@ -14,8 +14,8 @@ const Home = () => {
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-signature font-extrabold mb-4 text-center md:text-left py-4">
             Hi, I'm Julia!
           </h2>
-          <p className="text-gray-500 max-w-md text-center md:text-left pb-4 font-source text-xl">
-            CS & Data Science student passionate in machine learning and the intersection of computer science and education.
+          <p className="text-gray-500 max-w-md text-center md:text-left pb-4 font-paragraph text-2xl">
+            CS & Data Science student looking for machine learning internships
           </p>
           <div className="mt-4">
             <ScrollLink
@@ -23,7 +23,7 @@ const Home = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className="group text-white px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-violet-500 to-violet-700 cursor-pointer"
+              className="font-paragraph text-xl group text-white px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-violet-500 to-violet-700 cursor-pointer"
             >
               Experience
               <span className="group-hover:rotate-90 duration-300">
