@@ -23,7 +23,7 @@ const About = () => {
   return (
     <div name="about" className="w-full h-full pb-24 bg-black text-white">
       <div className="max-w-screen-lg h-full mx-auto p-4 pb-24 md:flex md:items-center">
-        <div className="md:w-1/2 flex md:justify-end items-center md:flex-col md:space-y-4 px-8 space-x-4 md:space-x-0 py-12">
+        <div className="md:w-1/2 flex md:justify-end items-center md:flex-col md:space-y-4 px-8 space-x-4 md:space-x-0 py-12 pb-24">
           <Image src={ucsdprofile} alt="UCSD Profile" />
         </div>
         <div className="md:w-1/2 md:pr-8">
@@ -47,8 +47,7 @@ const About = () => {
             </Paragraph>
             <Paragraph>
               I have experience in research on software development and
-              education, and I love working on personal projects in machine
-              learning.
+              education, and I love working on personal projects in ML.
             </Paragraph>
           </motion.div>
         </div>
