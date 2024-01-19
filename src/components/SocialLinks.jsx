@@ -2,7 +2,6 @@ import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
-import resume from "/Users/juliaepshtein/Desktop/portfolio/src/assets/me/resume.pdf"; 
 
 const SocialLinks = () => {
 
@@ -42,9 +41,7 @@ const SocialLinks = () => {
                     Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            href: resume,
-            style: 'rounded-bf-md',
-            download: 'Julia-Epshtein-Resume.pdf', 
+            href: "https://www.dropbox.com/scl/fi/b5ghbdjlanlq2af82t1o1/Julia-Epshtein-Resume.pdf?rlkey=yf5tteri74y7mcrpnyv7hzryq&dl=0",
         }         
     ];
 

@@ -83,8 +83,7 @@ const NavBar = () => {
           <BsFillPersonLinesFill size={30} />
         </>
       ),
-      //href: "//Users/juliaepshtein/Desktop/portfolio/src/assets/me/Resume.pdf",
-      //download: true,
+      href: "https://www.dropbox.com/scl/fi/b5ghbdjlanlq2af82t1o1/Julia-Epshtein-Resume.pdf?rlkey=yf5tteri74y7mcrpnyv7hzryq&dl=0",
     },
   ];
 
