@@ -15,7 +15,7 @@ const Home = () => {
             Hi, I'm Julia!
           </h2>
           <p className="text-gray-500 max-w-md text-center md:text-left pb-4 font-paragraph text-2xl">
-            CS & Data Science student looking for machine learning internships
+            CS & Data Science student looking for machine learning and data science internships
           </p>
           <div className="mt-4">
             <ScrollLink
