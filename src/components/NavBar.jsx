@@ -83,8 +83,8 @@ const NavBar = () => {
           <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "//Users/juliaepshtein/Desktop/portfolio/src/assets/me/Resume.pdf",
-      download: true,
+      //href: "//Users/juliaepshtein/Desktop/portfolio/src/assets/me/Resume.pdf",
+      //download: true,
     },
   ];
 
