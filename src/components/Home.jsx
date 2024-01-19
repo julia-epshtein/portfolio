@@ -11,11 +11,11 @@ const Home = () => {
           <img src={picture} alt="my profile" class="rounded-t-full w-56 md:w-80 mx-auto md:ml-8 " />
         </div>
         <div className="md:w-1/2 flex flex-col items-center md:items-start justify-center py-8 md:py-0 md:pl-8">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-center md:text-left py-4">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-signature font-extrabold mb-4 text-center md:text-left py-4">
             Hi, I'm Julia!
           </h2>
-          <p className="text-gray-500 max-w-md text-center md:text-left pb-4">
-            CS & Math student passionate in software development, machine learning, and the intersection of computer science and education.
+          <p className="text-gray-500 max-w-md text-center md:text-left pb-4 font-source text-xl">
+            CS & Data Science student passionate in machine learning and the intersection of computer science and education.
           </p>
           <div className="mt-4">
             <ScrollLink
@@ -23,7 +23,7 @@ const Home = () => {
               spy={true}
               smooth={true}
               duration={500}
-              className="group text-white px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-violet-400 to-purple-700 cursor-pointer"
+              className="group text-white px-6 py-3 flex items-center rounded-md bg-gradient-to-r from-violet-500 to-violet-700 cursor-pointer"
             >
               Experience
               <span className="group-hover:rotate-90 duration-300">

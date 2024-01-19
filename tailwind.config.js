@@ -10,7 +10,8 @@ module.exports = {
       fontFamily: {
         extend: {},
         signature: ['Dancing Script'],
-        source: ['Source Code Pro', 'monospace'],
+        source: ['Raleway'],
+        paragraph: ['Roboto'],
       },
     },
     screens: {

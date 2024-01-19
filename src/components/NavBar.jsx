@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link as ScrollLink } from "react-scroll";
 
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineMail } from 'react-icons/hi';
+import { BsFillPersonLinesFill } from 'react-icons/bs';
+
+
 const Link = ({ link, selectedLink, setSelectedLink }) => {
   const handleClick = () => {
     setSelectedLink(link);
@@ -34,7 +39,7 @@ const NavBar = () => {
       link: "about",
     },
     {
-      link: "skills",
+      link: "projects",
     },
     {
       link: "experience",
@@ -44,14 +49,55 @@ const NavBar = () => {
     },
   ];
 
+  const mediaLinks = [
+    {
+        id: 1,
+        child: (
+            <>
+              <FaLinkedin size={30} />
+            </>
+        ),
+        href: "https://www.linkedin.com/in/juliaepshtein/",
+    },
+    {
+        id: 2,
+        child: (
+            <>
+                <FaGithub size={30} />
+            </>
+        ),
+        href: "https://github.com/julia-epshtein",
+    },
+    {
+        id: 3,
+        child: (
+            <>
+                <HiOutlineMail size={30} />
+            </>
+        ),
+        href: "mailto:jepshtein@umass.edu",
+    },
+    {
+        id: 4,
+        child: (
+            <>
+                <BsFillPersonLinesFill size={30} />
+            </>
+        ),
+        href: "//Users/juliaepshtein/Desktop/portfolio/src/assets/me/Resume.pdf",
+        download: true,
+    }
+];
+
+  
   return (
     <div className={"fixed top-0 flex justify-between items-center w-full h-20 px-4 text-white bg-black z-50"}>
       <div>
-        <h1 className={"text-4xl font-signature ml-2 text-white"}>Julia Epshtein</h1>
+        <h1 className={"text-xl font-mono ml-2 text-white"}>Julia Epshtein</h1>
       </div>
 
       {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 right-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className="flex flex-col justify-center items-center absolute top-0 right-0 w-full h-screen bg-gradient-to-b from-black to-deep-blue text-gray-500 font-source font-700">
           {links.map(({ link }) => (
             <li className="px-4 cursor-pointer capitalize py-6 text-4xl" key={link}>
               <Link

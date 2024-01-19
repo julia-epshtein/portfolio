@@ -8,7 +8,6 @@ import wearableLearning from "../assets/companies/wearableLearning.png";
 import rtc from "../assets/companies/rtc.jpg";
 import rsm from "../assets/companies/rsm.jpg";
 import ials from "../assets/companies/ials.png";
-import hospital from "../assets/companies/hospital.jpg";
 
 import HeaderStyle from '../utilities/HeaderStyle';
 
@@ -46,7 +45,7 @@ const Experience = () => {
     return (
         <div name="experience" className="w-full bg-gradient-to-b from-deep-blue to-black text-white pt-40">
             <div className="w-full max-w-screen-lg mx-auto flex flex-col justify-center pt-20">
-                <HeaderStyle headerText="Experience" />
+                <span className="pl-8"><HeaderStyle headerText="Experience" /></span>
                 <div className="w-full mt-20 flex flex-col">
                     <div className="vertical-timeline-container pb-40">
                         <VerticalTimeline>
@@ -105,15 +104,6 @@ const Experience = () => {
                                 description="Determined the accuracy of an insole that classifies events based on foot orientation during walking, tracked human motion, built models, processed data, and tested accuracy through MATLAB."
                                 skills="REDCap, Visual3D, MATLAB, StepScan, Qualisys, Research, Python"
                                 icon={ials}
-                            />
-
-                            {/* Liver Patient Prediction */}
-                            <TimelineElement
-                                date="MAY 2022 - AUG 2022"
-                                title="Liver Patient Prediction"
-                                subtitle="Project"
-                                description="Predicted liver disease using classification methods with supervised machine learning algorithms, achieving 86% accuracy."
-                                icon={hospital}
                             />
                         </VerticalTimeline>
                     </div>

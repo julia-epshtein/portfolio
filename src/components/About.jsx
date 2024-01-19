@@ -1,59 +1,76 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import HeaderStyle from '../utilities/HeaderStyle';
+import HeaderStyle from "../utilities/HeaderStyle";
 import ucsdprofile from "../assets/me/ucsdprofile.jpg";
 
 const About = () => {
-    const controls = useAnimation();
-    const [ref, inView] = useInView();
+  const controls = useAnimation();
+  const [ref, inView] = useInView();
 
-    useEffect(() => {
-        if (inView) {
-            controls.start("visible");
-        }
-    }, [controls, inView]);
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
 
-    const fadeInVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.4 } }
-    };
+  const fadeInVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay: 0.4 } },
+  };
 
-    return (
-        <div name="about" className="w-full bg-gradient-to-b from-deep-blue to-black text-white">
-            <div className="max-w-screen-lg mx-auto p-4 md:flex md:items-center">
-                <div className="md:w-1/2 md:pr-8">
-                    <motion.div
-                        ref={ref}
-                        initial="hidden"
-                        animate={controls}
-                        variants={fadeInVariants}
-                    >
-                        <HeaderStyle headerText="About Me" />
-                        <Paragraph>
-                            I am an honors CS & Data Science student at UMass. I have experience building React Apps, developing coursework, and teaching computer science and math, and I'm interested in frontend development, machine learning, and exploring the intersection between computer science and education. At UC San Diego, I'm researching the reliability of spreadsheet software by developing and piloting a custom Jupyter Notebooks Widget using Python, React, and the Javascript AG-Grid framework. I am also a course assistant for CS 240: Reasoning Under Uncertainty and a math tutor at the Russian School of Math.
-                        </Paragraph>
-                    </motion.div>
-                </div>
-                <div className="md:w-1/2 flex md:justify-end items-center md:flex-col md:space-y-4 px-8 space-x-4 md:space-x-0 py-12">
-                    <Image src={ucsdprofile} alt="UCSD Profile" />
-                </div>
-            </div>
+  return (
+    <div name="about" className="w-full bg-black text-white">
+      <div className="max-w-screen-lg mx-auto p-4 md:flex md:items-center h-screen">
+        <div className="md:w-1/2 flex md:justify-end items-center md:flex-col md:space-y-4 px-8 space-x-4 md:space-x-0 py-12">
+          <Image src={ucsdprofile} alt="UCSD Profile" />
         </div>
-    );
-}
+        <div className="md:w-1/2 md:pr-8">
+          <motion.div
+            ref={ref}
+            initial="hidden"
+            animate={controls}
+            variants={fadeInVariants}
+          >
+            <div className="ml-4">
+              {" "}
+              <HeaderStyle headerText="About Me" />
+            </div>
+            <Paragraph>
+              Welcome! I am currently studying{" "}
+              <span className="text-blue-500">Computer Science</span> and{" "}
+              <span className="text-blue-500">Data Science</span> at the
+              University of Massachusetts Amherst. I am interested in{" "}
+              <span className="text-blue-500">machine learning</span> and the
+              intersection of computer science and education.
+            </Paragraph>
+            <Paragraph>
+              I have experience in research on software development and
+              education, and I love working on personal projects in machine
+              learning.
+            </Paragraph>
+          </motion.div>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Paragraph = ({ children }) => (
-    <p className="text-xl max-w-1/2 leading-relaxed pt-8">
-        {children}
-    </p>
+  <p className="text-2xl max-w-1/2 leading-relaxed pt-8 font-paragraph ml-4">
+    {children}
+  </p>
 );
 
 const Image = ({ src, alt }) => (
-    <div className="relative w-[40%] md:w-[75%] max-h-[40%] mx-auto rounded">
-        <img src={src} alt={alt} className="w-full h-full object-cover rounded-xl" />
-    </div>
+  <div className="relative w-[50%] md:w-[80%] max-h-[60%]">
+    <img
+      src={src}
+      alt={alt}
+      className="w-full h-full object-cover border-indigo-400 border-spacing-4 border-8"
+    />
+  </div>
 );
 
 export default About;
