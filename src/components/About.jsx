@@ -47,7 +47,7 @@ const About = () => {
             </Paragraph>
             <Paragraph>
               I have experience in research on software development and
-              education, and I love working on personal projects in ML.
+              education, and I love working on personal projects in machine learning.
             </Paragraph>
           </motion.div>
         </div>

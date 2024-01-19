@@ -41,13 +41,12 @@ const Projects = () => {
           title="Personify"
           tools={
             <>
-              <span className="inline-flex items-center gap-4 text-4xl">
+              <span className="inline-flex items-center gap-2 text-4xl">
                 <p className="text-lg">Made with:</p>
                 <Icon icon="logos:react" />
                 <Icon icon="skill-icons:tailwindcss-dark" />
                 <Icon icon="logos:python" />
                 <Icon icon="devicon:nextjs" />
-                <Icon icon="mdi:spotify" />
                 <Icon icon="devicon:tensorflow" />
                 <Icon icon="devicon:keras-wordmark" />
                 <Icon icon="devicon:scikitlearn" />
