@@ -41,9 +41,9 @@ const SocialLinks = () => {
                     Resume <BsFillPersonLinesFill size={30} />
                 </>
             ),
-            //href: require("/Users/juliaepshtein/Desktop/portfolio/src/assets/me/Julia-Epshtein-Resume.pdf"),
-           // style: 'rounded-bf-md',
-            //download: 'Julia-Epshtein-Resume.pdf', // Specify the desired file name
+            href: require("/Users/juliaepshtein/Desktop/portfolio/src/assets/me/resume.pdf"),
+            style: 'rounded-bf-md',
+            download: 'Julia-Epshtein-Resume.pdf', 
         }         
     ];
 
