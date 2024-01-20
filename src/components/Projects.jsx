@@ -31,7 +31,7 @@ const Projects = () => {
       className="w-full h-full bg-gradient-to-br from-sky-300 to-violet-400 text-white pt-20 pb-20"
     >
       <div className="max-w-screen-sm w-full mx-auto">
-        <div className="text-black">
+        <div className="text-black xs:ml-4">
           {" "}
           <HeaderStyle headerText="Projects" />
         </div>
