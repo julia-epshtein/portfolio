@@ -96,7 +96,7 @@ const NavBar = () => {
       <div>
         <h1 className={"text-xl font-mono ml-2 text-white"}>Julia Epshtein</h1>
       </div>
-      <div className="md:hidden flex items-center gap-2 mr-2">
+      <div className="md:hidden flex items-center gap-2 mr-4">
         {mediaLinks.map(({ id, child, href, download }) => (
           <a
             key={id}
