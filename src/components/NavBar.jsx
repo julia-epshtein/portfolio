@@ -138,7 +138,7 @@ const NavBar = () => {
       <ul className="hidden md:flex pr-4">
         {links.map(({ link }) => (
           <li
-            className="font-source px-4 cursor-pointer capitalize font-bold text-gray-500 hover:scale-105 duration-200"
+            className="font-source px-4 cursor-pointer capitalize font-bold text-gray-500 hover:scale-105"
             key={link}
           >
             <Link
