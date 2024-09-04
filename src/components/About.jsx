@@ -38,19 +38,29 @@ const About = () => {
               <HeaderStyle headerText="About Me" />
             </div>
             <Paragraph>
-              Welcome! I am currently studying{" "}
+              Welcome! I am a{" "}
               <span className="text-blue-500">Computer Science</span> and{" "}
-              <span className="text-blue-500">Data Science</span> at the
-              University of Massachusetts Amherst. I am interested in{" "}
-              <span className="text-blue-500">machine learning</span> and the
-              intersection of computer science and education.
+              <span className="text-blue-500">Statistics & Data Science</span>{" "}
+              student at UMass Amherst. My journey into tech started with a fascination for
+              solving complex problems, and over the years, I’ve delved into
+              various areas like machine learning, software engineering, and
+              computational biology. Alongside my studies, I’ve been fortunate
+              to work on impactful projects and internships, including
+              developing machine learning models for Parkinson’s disease and
+              equitable mental health diagnosis, and contributing to research on
+              spreadsheet safety at UC San Diego.
             </Paragraph>
-            <div className="pb-24">
-            <Paragraph>
-              I have experience in research on software development and
-              education, and I love working on personal projects in machine learning.
-            </Paragraph>
-            </div>
+            {/* <div className="pb-24">
+              <Paragraph>
+                When I’m not immersed in code, you’ll find me dancing on the
+                Ballroom Dance Team, or cooking for my friends. A fun fact about
+                me is that I'm Russian and English, conversational in Spanish,
+                and have a knack for picking up new languages (I am currently
+                learning Hebrew). My goal is to use my diverse experiences and
+                technical skills to drive innovation and make a meaningful
+                impact in the tech world.
+              </Paragraph>
+            </div> */}
           </motion.div>
         </div>
       </div>

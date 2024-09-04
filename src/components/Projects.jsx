@@ -8,9 +8,13 @@ import { Icon } from "@iconify/react";
 const ProjectCard = ({ title, tools, description, githubLink }) => {
   return (
     <div className="rounded-xl bg-white p-8 transition duration-300 ease-in-out transform hover:bg-gray-200">
-      <h2 className="text-3xl pb-8 text-black font-source font-bold">{title}</h2>
+      <h2 className="text-3xl pb-8 text-black font-source font-bold">
+        {title}
+      </h2>
       <h3 className="text-slate-500 font-source font-semibold pb-8">{tools}</h3>
-      <p className="mt-2 text-black font-source pb-4 leading-7">{description}</p>
+      <p className="mt-2 text-black font-source pb-4 leading-7">
+        {description}
+      </p>
       <a
         href={githubLink}
         target="_blank"
@@ -38,25 +42,32 @@ const Projects = () => {
       </div>
       <div className="flex flex-col gap-8 max-w-screen-sm w-full mx-auto mt-12">
         <ProjectCard
-          title="Personify"
+          title="Predicting Future Shores"
           tools={
             <>
               <span className="inline-flex items-center gap-2 text-4xl">
                 <p className="text-lg">Made with:</p>
-                <Icon icon="logos:react" />
-                <Icon icon="skill-icons:tailwindcss-dark" />
                 <Icon icon="logos:python" />
-                <Icon icon="devicon:nextjs" />
-                <Icon icon="devicon:tensorflow" />
-                <Icon icon="devicon:keras-wordmark" />
-                <Icon icon="devicon:scikitlearn" />
+                <Icon icon="logos:matlab" />
               </span>
             </>
           }
-          description="Discover your personality through your music taste. Currently developing a web application that uses machine learning to predict personality traits based on a user's Spotify listening history."
-          githubLink="https://github.com/julia-epshtein/spotify-personify"
+          description="Analyzing coastal regions using the National Climate Data Server to map and identify corresponding coastlines. Developing and implementing supervised learning models and Convolutional Neural Networks (CNNs) in Python and MATLAB to forecast future shoreline changes. Designing an open-source interactive tool for visualizing and predicting future coastal changes."
+          githubLink="https://github.com/julia-epshtein/predicting-future-shores"
         />
-
+        <ProjectCard
+          title="Bias In Mental Health Diagnosis"
+          tools={
+            <>
+              <span className="inline-flex items-center gap-4 text-4xl">
+                <p className="text-lg">Made with:</p>
+                <Icon icon="logos:python" />
+              </span>
+            </>
+          }
+          description="Developing a machine learning model for ADHD diagnosis using clinical and sociodemographic data, focusing on
+        reducing bias and adding interpretability"
+        />
         <ProjectCard
           title="Titanic Survival Prediction"
           tools={

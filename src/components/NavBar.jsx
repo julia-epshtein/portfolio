@@ -16,7 +16,7 @@ const Link = ({ link, selectedLink, setSelectedLink }) => {
       to={link}
       spy={true}
       smooth={true}
-      duration={500}
+      duration={200}
       activeClass="text-purple-400"
       className={`hover:text-purple-400`}
       onClick={handleClick}
